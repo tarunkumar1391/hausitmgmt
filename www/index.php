@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+?>
+<?php
 
 if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
 
@@ -21,7 +25,6 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
         // output data of each row
         // while($row = $result->fetch_assoc()) {
         //   echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-        session_start();
         $_SESSION['name']=$uname;
         //Storing the name of user in SESSION variable.
         header("location: home.php");
