@@ -9,9 +9,9 @@ body {
 }
 .sidenavpad{
     padding-top: 4%;
-    border-bottom: solid 1px;
-    border-right: dashed;
-    border-color: #1976d2;
+    border-bottom: solid;
+    border-right: groove;
+    border-color: lightgrey;
 }
 .contentpad{
     padding-top: 2%;
