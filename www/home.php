@@ -11,27 +11,7 @@ $name=$_SESSION['name'];
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Haus IT Management</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <script src="../scripts/angular.min.js"></script>
-        <script src="../scripts/ui-bootstrap-tpls-2.0.0.min.js"></script>
-        <script src="../scripts/angular-animate.min.js"></script>
-        <script src="../scripts/angular-filter.min.js"></script>
-        <script src="../scripts/control.js"></script>
-        <script src="../scripts/inventoryControl.js"></script>
-        <script src="../scripts/softlicenseControl.js"></script>
-        <script src="../scripts/switchpatchControl.js"></script>
-        <script src="../scripts/jquery-3.1.1.min.js"></script>
-        <script src="../scripts/tether.min.js"></script>
-        <script src="../scripts/bootstrap.min.js"></script>
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
-
-
+        <?php include 'include.php';?>
     </head>
     <body ng-app="hausIt">
         <div class="container-fluid">
@@ -48,7 +28,7 @@ $name=$_SESSION['name'];
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="home.php">Home</a></li>
+                                <li><a href="home.php">Home</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo "$name";?></a></li>
@@ -61,15 +41,15 @@ $name=$_SESSION['name'];
             <div class="row tabpad">
                 <div class="col-md-12 col-lg-12">
                     <ul class="nav nav-tabs ">
-                        <li class="active"><a data-toggle="tab" href="#userMgmt">User Management</a></li>
+                        <li ><a data-toggle="tab" href="#userMgmt">User Management</a></li>
                         <li><a data-toggle="tab" href="#softLicensemgmt">Software License Mangement</a></li>
                         <li><a data-toggle="tab" href="#invMgmt">Inventory Management</a></li>
                         <li><a data-toggle="tab" href="#swtPatchMgmt">Switching & Patching</a></li>
                     </ul>
-
                     <div class="tab-content">
+                        <div class="welcome tab-pane fade in active"><h3>Welcome to the IKP Management console!!!</h3></div>
                         <!-- Start of User management section -->
-                        <div id="userMgmt" class="tab-pane fade in active">
+                        <div id="userMgmt" class="tab-pane fade">
                             <div class="col-md-2 col-lg-2" >
                                 <ul class="nav nav-pills nav-stacked sidenavpad">
                                     <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
@@ -102,7 +82,6 @@ $name=$_SESSION['name'];
                                     if (entryType.value != "Single"){
                                         devQuantity.value = "";
                                         devQuantity.disabled = "";
-
                                     }else {
                                         devQuantity.value = 1;
                                         devQuantity.disabled = "true";
@@ -111,7 +90,6 @@ $name=$_SESSION['name'];
                                 function assign(){
                                     var availStock = document.getElementById("avaStock");
                                     var hardQty = document.getElementById("hrdQty");
-
                                     if(availStock.value != 1){
                                         hardQty.disabled = "";
                                     }else{
@@ -126,10 +104,8 @@ $name=$_SESSION['name'];
                             <?php include '../views/switchpatch/html/index.html';?>
                         </div>
                     </div>
-
+                </div>
             </div>
         </div>
-
-
     </body>
 </html>
