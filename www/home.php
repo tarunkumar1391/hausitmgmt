@@ -49,21 +49,23 @@ $name=$_SESSION['name'];
                     <div class="tab-content">
                         <div class="welcome tab-pane fade in active"><h3>Welcome to the IKP Management console!!!</h3></div>
                         <!-- Start of User management section -->
-                        <div id="userMgmt" class="tab-pane fade">
+                        <div id="userMgmt" class="tab-pane fade" ng-app="usersManage">
                             <div class="col-md-2 col-lg-2" >
                                 <ul class="nav nav-pills nav-stacked sidenavpad">
-                                    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                                    <li><a data-toggle="tab" href="#test2">Menu 1</a></li>
-                                    <li><a data-toggle="tab" href="#test3">Menu 2</a></li>
-                                    <li><a data-toggle="tab" href="#test4">Menu 3</a></li>
+                                    <li><a data-toggle="tab" href="#addUser">Register</a></li>
+                                    <li><a data-toggle="tab" href="#updateUser">Update</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-10 col-lg-10">
                                 <div class="tab-content contentpad">
-                                    <div id="home" class="tab-pane fade"><h3>Home</h3></div>
-                                    <div id="test2" class="tab-pane fade"><h3>Test 1</h3></div>
-                                    <div id="test3" class="tab-pane fade"><h3>Test 2</h3></div>
-                                    <div id="test4" class="tab-pane fade"><h3>Test 3</h3></div>
+                                    <div class="welcome tab-pane fade in active"><h3>Welcome to Haus IT User Management</h3></div>
+                                    <div id="addUser" class="tab-pane fade">
+                                        <?php include '../views/users/html/index.html';?>
+                                    </div>
+                                    <div id="updateUser" class="tab-pane fade">
+                                        <?php include '../views/users/html/update.html';?>
+                                    </div>
+
                                 </div>
                             </div>
 

@@ -16,3 +16,9 @@ body {
 .contentpad{
     padding-top: 2%;
 }
+.divider{
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    margin-bottom: 1%;
+}

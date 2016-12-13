@@ -18,7 +18,7 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
     $uemail = $_POST['userEmail'];
     $passwd = $_POST['userPasswd'];
     $uname = substr($uemail,0, strpos($uemail, '@'));
-    $sql = "SELECT * FROM auth where email = '$uemail' and password = '$passwd'";
+    $sql = "SELECT * FROM users where userEmail = '$uemail' and userPassword = '$passwd'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

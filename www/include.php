@@ -12,6 +12,7 @@
 <script src="../scripts/inventoryControl.js"></script>
 <script src="../scripts/softlicenseControl.js"></script>
 <script src="../scripts/switchpatchControl.js"></script>
+<script src="../scripts/usersControl.js"></script>
 <script src="../scripts/jquery-3.1.1.min.js"></script>
 <script src="../scripts/tether.min.js"></script>
 <script src="../scripts/bootstrap.min.js"></script>
