@@ -64,7 +64,7 @@ if ($stmt2->execute()) {
 //    echo "Software db has been updated" ;
     if($stmt->execute()){
         echo "A new entry has been created successfully and the license database has been updated accordingly!! ".'\n' ;
-        echo '<a href="../www/index.html">click here to return!!</a>';
+        echo '<a href="../../www/index.php">click here to return!!</a>';
 //    header("Location: ../www/index.html");
 
     }else {
@@ -72,7 +72,7 @@ if ($stmt2->execute()) {
     }
     //script for mail
 
-    require('./phpmailer/PHPMailerAutoload.php');
+    require('../phpmailer/PHPMailerAutoload.php');
     $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -103,7 +103,7 @@ if ($stmt2->execute()) {
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Software registration at IKP';
-    $mail->msgHTML(file_get_contents('../www/confirmation.html'), dirname(__FILE__));
+    $mail->msgHTML(file_get_contents('../../views/softlicense/html/confirmation.html'), dirname(__FILE__));
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     if(!$mail->send()) {
