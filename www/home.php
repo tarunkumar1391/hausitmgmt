@@ -53,7 +53,7 @@ $name=$_SESSION['name'];
                             <div class="col-md-2 col-lg-2" >
                                 <ul class="nav nav-pills nav-stacked sidenavpad">
                                     <li><a data-toggle="tab" href="#addUser">Register</a></li>
-                                    <li><a data-toggle="tab" href="#updateUser">Update</a></li>
+                                    <li><a data-toggle="tab" href="#updateUser">View</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-10 col-lg-10">

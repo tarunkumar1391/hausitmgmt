@@ -1,0 +1,53 @@
+
+<div class="modal-header">
+    <h3 class="modal-title">Update User: {{items.Sno}} </h3>
+</div>
+<div class="modal-body" ng-controller="usersController">
+    <form role="form" class="form-horizontal" action="../server/users/updateuser.php" method="post">
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Full name:</label>
+            <div class="col-lg-8 col-md-8">
+                <input type="hidden" class="form-control" name="sno"  value="{{items.Sno}}">
+                <input type="text" class="form-control" name="userfname" required value="{{items.fullname}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Email:</label>
+            <div class="col-lg-8 col-md-8">
+                <input type="email"  class="form-control" name="userEmail" value="{{items.email}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Designation :</label>
+            <div class="col-lg-6 col-md-6">
+                <select class="form-control" name="userDesignation" ng-model="items.designation" required>
+                    <option ng-disabled="true"  value="">choose a designation</option>
+                    <option value="hiwi">HIWI</option>
+                    <option value="employee">Employee</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Room No. :</label>
+            <div class="col-lg-8 col-md-8">
+                <input type="text" class="form-control" name="userRoom"  value="{{items.room}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Description:</label>
+            <div class="col-lg-8 col-md-8">
+                <textarea  class="form-control" name="userDescription"  required>{{items.description}}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+

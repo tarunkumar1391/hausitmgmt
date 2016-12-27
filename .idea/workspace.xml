@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5858a792-4370-4354-ab21-aaa1542968fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventory/addinventory.php" afterPath="$PROJECT_DIR$/server/inventory/addinventory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventory/assignhardware.php" afterPath="$PROJECT_DIR$/server/inventory/assignhardware.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventory/deleteassignment.php" afterPath="$PROJECT_DIR$/server/inventory/deleteassignment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventory/updateassignments.php" afterPath="$PROJECT_DIR$/server/inventory/updateassignments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventory/updateinventory.php" afterPath="$PROJECT_DIR$/server/inventory/updateinventory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/softlicense/main.php" afterPath="$PROJECT_DIR$/server/softlicense/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/softlicense/softallocation.php" afterPath="$PROJECT_DIR$/server/softlicense/softallocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/softlicense/update.php" afterPath="$PROJECT_DIR$/server/softlicense/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/patchnew.php" afterPath="$PROJECT_DIR$/server/switchpatch/patchnew.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/router.php" afterPath="$PROJECT_DIR$/server/switchpatch/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/switch.php" afterPath="$PROJECT_DIR$/server/switchpatch/switch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/updaterouter.php" afterPath="$PROJECT_DIR$/server/switchpatch/updaterouter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/updateswitch.php" afterPath="$PROJECT_DIR$/server/switchpatch/updateswitch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/switchpatch/updateswpatch.php" afterPath="$PROJECT_DIR$/server/switchpatch/updateswpatch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inventory/html/assignhardware.html" afterPath="$PROJECT_DIR$/views/inventory/html/assignhardware.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inventory/html/index.html" afterPath="$PROJECT_DIR$/views/inventory/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inventory/html/updateassignments.html" afterPath="$PROJECT_DIR$/views/inventory/html/updateassignments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inventory/html/updatemodal.html" afterPath="$PROJECT_DIR$/views/inventory/html/updatemodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inventory/html/viewassignments.html" afterPath="$PROJECT_DIR$/views/inventory/html/viewassignments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/softlicense/html/index.html" afterPath="$PROJECT_DIR$/views/softlicense/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/softlicense/html/pubmodmodal.html" afterPath="$PROJECT_DIR$/views/softlicense/html/pubmodmodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/switchpatch/html/pubmodmodal.html" afterPath="$PROJECT_DIR$/views/switchpatch/html/pubmodmodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/switchpatch/html/routerupdate.html" afterPath="$PROJECT_DIR$/views/switchpatch/html/routerupdate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/switchpatch/html/switchesupdate.html" afterPath="$PROJECT_DIR$/views/switchpatch/html/switchesupdate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/users/updateuser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/users/html/userupdate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/usersControl.js" afterPath="$PROJECT_DIR$/scripts/usersControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/home.php" afterPath="$PROJECT_DIR$/www/home.php" />
     </list>
     <ignored path="hausitmgmt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,15 +28,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="assignhardware.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/inventory/assignhardware.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-              <folding>
-                <marker date="1481723404517" expanded="true" signature="578:778" placeholder="INSERT INTO hardwareassignments... " />
-                <marker date="1481723404517" expanded="true" signature="982:1031" placeholder="UPDATE inven... " />
-              </folding>
+            <state relative-caret-position="418">
+              <caret line="55" column="84" selection-start-line="55" selection-start-column="84" selection-end-line="55" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/users/html/update.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userupdate.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/users/html/userupdate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="switchesupdate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/switchpatch/html/switchesupdate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usersControl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/usersControl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateuser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/users/updateuser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,10 +117,7 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/control.js" />
         <option value="$PROJECT_DIR$/server/users/adduser.php" />
-        <option value="$PROJECT_DIR$/views/users/html/index.html" />
         <option value="$PROJECT_DIR$/www/include.php" />
-        <option value="$PROJECT_DIR$/www/home.php" />
-        <option value="$PROJECT_DIR$/scripts/usersControl.js" />
         <option value="$PROJECT_DIR$/server/users/fetchusers.php" />
         <option value="$PROJECT_DIR$/views/users/html/update.html" />
         <option value="$PROJECT_DIR$/www/index.php" />
@@ -120,6 +145,10 @@
         <option value="$PROJECT_DIR$/server/inventory/deleteassignment.php" />
         <option value="$PROJECT_DIR$/server/inventory/updateassignments.php" />
         <option value="$PROJECT_DIR$/server/inventory/updateinventory.php" />
+        <option value="$PROJECT_DIR$/www/home.php" />
+        <option value="$PROJECT_DIR$/scripts/usersControl.js" />
+        <option value="$PROJECT_DIR$/views/users/html/index.html" />
+        <option value="$PROJECT_DIR$/views/users/html/userupdate.html" />
       </list>
     </option>
   </component>
@@ -205,7 +234,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="switchpatch" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,7 +296,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inventory" />
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hausitmgmt" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,15 +392,15 @@
       <workItem from="1480527330193" duration="11613000" />
       <workItem from="1480618568327" duration="4029000" />
       <workItem from="1480624011455" duration="2473000" />
-      <workItem from="1480939417751" duration="51245000" />
+      <workItem from="1480939417751" duration="55304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69692000" />
+    <option name="totallyTimeSpent" value="73751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2118" height="1281" extended-state="7" />
+    <frame x="-9" y="-9" width="2118" height="1281" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -351,32 +438,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/switchpatchControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/first.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="93" column="7" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -411,32 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/html/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/usersControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/users/fetchusers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -454,14 +489,6 @@
           <folding>
             <marker date="1481644350469" expanded="true" signature="523:649" placeholder="INSERT INTO users... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -493,16 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/switchpatch/updateswitch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <marker date="1481723404564" expanded="true" signature="495:590" placeholder="UPDATE switc... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/switchpatch/updaterouter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
@@ -530,22 +547,6 @@
           <folding>
             <marker date="1481723404970" expanded="true" signature="473:557" placeholder="INSERT INTO routers... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/switchpatch/html/switchesupdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/switchpatch/html/routerupdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,14 +814,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/switchpatchControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="176" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/inventory/assignhardware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
+        <state relative-caret-position="621">
           <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding>
             <marker date="1481723404517" expanded="true" signature="578:778" placeholder="INSERT INTO hardwareassignments... " />
             <marker date="1481723404517" expanded="true" signature="982:1031" placeholder="UPDATE inven... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/switchpatch/html/routerupdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="5" column="76" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="55" column="84" selection-start-line="55" selection-start-column="84" selection-end-line="55" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/switchpatch/updateswitch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding>
+            <marker date="1481723404564" expanded="true" signature="495:590" placeholder="UPDATE switc... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/users/html/update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/users/updateuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/users/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/usersControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/switchpatch/html/switchesupdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/users/html/userupdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

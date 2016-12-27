@@ -18,8 +18,8 @@ usersManage.controller('usersController',function ($scope,$http,$uibModal, $log)
 
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: '../views/inventory/html/assignhardware.html',
-                controller: 'assignHardController',
+                templateUrl: '../views/users/html/userupdate.html',
+                controller: 'ModalInstanceCtrl',
                 size: size,
                 resolve: {
                     items: function () {
@@ -40,4 +40,17 @@ usersManage.controller('usersController',function ($scope,$http,$uibModal, $log)
         };
     })
 
+});
+usersManage.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+
+    $scope.items = items;
+
+
+    $scope.ok = function () {
+        $uibModalInstance.close($scope.selected.item);
+    };
+
+    $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
 });
