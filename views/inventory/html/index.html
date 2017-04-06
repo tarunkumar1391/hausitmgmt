@@ -1,6 +1,9 @@
         <div class="col-md-2 col-lg-2 navbg">
             <ul class="nav nav-pills nav-stacked sidenavpad">
                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="tab" href="#hardwareList">Hardware List</a>
+                </li>
+                <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Inventory<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a data-toggle="tab" href="#addtoInvetory">Add</a></li>
@@ -22,6 +25,46 @@
             <div class="row">
                 <div class="tab-content contentpad">
                     <div class="welcome tab-pane fade in active"><h3>Welcome to the IKP Inventory!!!</h3></div>
+                    <div id="hardwareList" class="tab-pane fade" ng-controller = "hardwareListController">
+                        <form class="form" role="form"> <!-- search field(incomplete) size="78"-->
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" ng-click="exportData()">Export as PDF</button>
+                            </div>
+                            <div class="form-group ">
+                                   <input type="text" class="form-control "  type="text"  placeholder="Search... " ng-model="allotSearch">
+                            </div>
+                        </form>
+                        <div class="table-responsive" id="exportable">
+                            <table class="table table-hover" >
+                                <thead>
+                                <tr>
+                                    <th>Sno</th>
+                                    <th>Room No.</th>
+                                    <th>Kostenst.</th>
+                                    <th>Inventar Nr.</th>
+                                    <th>Device</th>
+                                    <th>IP Address</th>
+                                    <th>Mac Address</th>
+                                    <th>User</th>
+                                    <th>Comments</th>
+                                </tr>
+                                </thead>
+                                <tbody >
+                                <tr ng-repeat="entry in entries | filter: allotSearch" ng-click = "open('lg');">
+                                    <td>{{entry.Sno}}</td>
+                                    <td>{{entry.Room}}</td>
+                                    <td>{{entry.Kostenstelle}}</td>
+                                    <td>{{entry.Inventar}}</td>
+                                    <td>{{entry.Device}}</td>
+                                    <td>{{entry.Ipaddress}}</td>
+                                    <td>{{entry.MAC}}</td>
+                                    <td>{{entry.Uname}}</td>
+                                    <td>{{entry.Comments}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                     <div id="addtoInvetory" class="tab-pane fade ">
                         <!--Device registration-->
                         <div class="container">

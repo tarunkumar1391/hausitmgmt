@@ -20,7 +20,6 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
     $uname = substr($uemail,0, strpos($uemail, '@'));
     $sql = "SELECT * FROM users where userEmail = '$uemail' and userPassword = '$passwd'";
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
         // output data of each row
         // while($row = $result->fetch_assoc()) {
@@ -30,7 +29,8 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
         header("location: home.php");
 
     } else {
-        echo "Kindly check your credentials and try again!!!";
+        echo "<h4>Kindly check your credentials and try again!!!</h4>";
+
     }
     $conn->close();
 }

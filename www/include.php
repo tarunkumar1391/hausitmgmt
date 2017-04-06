@@ -16,3 +16,4 @@
 <script src="../scripts/jquery-3.1.1.min.js"></script>
 <script src="../scripts/tether.min.js"></script>
 <script src="../scripts/bootstrap.min.js"></script>
+<script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>

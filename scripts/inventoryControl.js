@@ -6,6 +6,57 @@
  */
 var inventoryApp = angular.module('inventoryApp',['ui.bootstrap','ngAnimate','angular.filter']);
 
+//Hardware list
+inventoryApp.controller('hardwareListController',function ($scope,$http,$uibModal, $log) {
+//also for assigning hardware as well
+
+    $http.get('../server/inventory/hardwarelist.php').then(function (response) {
+        $scope.entries = response.data.records;
+
+        // $scope.animationsEnabled = true;
+        // $scope.open = function(size){
+        //
+        //     $scope.items = this.entry;
+        //     console.log($scope.items);
+        //
+        //
+        //     var modalInstance = $uibModal.open({
+        //         animation: $scope.animationsEnabled,
+        //         templateUrl: '../views/inventory/html/assignhardware.html',
+        //         controller: 'assignHardController',
+        //         size: size,
+        //         resolve: {
+        //             items: function () {
+        //                 return $scope.items;
+        //             }
+        //         }
+        //     });
+        //
+        //     modalInstance.result.then(function (selectedItem) {
+        //         $scope.selected = selectedItem;
+        //     }, function () {
+        //         $log.info('Modal dismissed at: ' + new Date());
+        //     });
+        // };
+        //
+        // $scope.toggleAnimation = function () {
+        //     $scope.animationsEnabled = !$scope.animationsEnabled;
+        // };
+
+        $scope.exportData = function () {
+            var blob = new Blob([document.getElementById('exportable').innerHTML], {
+                type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
+            });
+            saveAs(blob, "Inventarlist.xls");
+        };
+    })
+
+});
+
+
+
+
+
 // fetching routers and switches
 
 inventoryApp.controller('addinventoryController',function ($scope,$http, $uibModal, $log) {
