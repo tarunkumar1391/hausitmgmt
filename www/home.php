@@ -110,4 +110,22 @@ $name=$_SESSION['name'];
             </div>
         </div>
     </body>
+    <script>
+        var dofalloc = document.getElementById("dalloc1");
+        var dofallocfinal = document.getElementById("dalloc");
+        var licenseExpiry = document.getElementById("lexpiry1");
+        var licenseExpiryfinal = document.getElementById("lexpiry");
+        var dateofPurch = document.getElementById("dop1");
+        var dateofPurchfinal = document.getElementById("dop");
+        function dateofalloc() {
+
+            dofallocfinal.value = dofalloc.value;
+        }
+        function licenseexpr(){
+            licenseExpiry.value = licenseExpiryfinal.value;
+        }
+        function dateofpurchase() {
+            dateofPurchfinal.value = dateofPurch.value;
+        }
+    </script>
 </html>

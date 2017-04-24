@@ -357,7 +357,7 @@ inventoryApp.controller('updateAssignmentsController',function ($scope,$http,$ui
         $scope.open = function(size){
 
             $scope.items = this.entry;
-            console.log($scope.items);
+            
 
 
             var modalInstance = $uibModal.open({

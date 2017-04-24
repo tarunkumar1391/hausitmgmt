@@ -2,8 +2,8 @@
             <div class="col-md-2 col-lg-2 navbg">
                 <ul class="nav nav-pills nav-stacked sidenavpad">
                     <li><a data-toggle="tab" href="#viewEntries">Dasboard</a></li>
-                    <li><a data-toggle="tab" href="#newEntry">Register a software</a></li>
                     <li><a data-toggle="tab" href="#allocateLicense">Allocate license</a></li>
+                    <li><a data-toggle="tab" href="#newEntry">Register a software</a></li>
                     <li><a data-toggle="tab" href="#purchasehistory">Purchase history</a></li>
 
                 </ul>
@@ -23,7 +23,8 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" >Date of purchase:</label>
                                     <div class="col-lg-8 col-md-8">
-                                        <input type="date" class="form-control" name="dop" placeholder="Choose the date of purchase" required>
+                                        <input type="text" class="form-control" id ="dop1" placeholder="Choose the date of purchase" onchange="dateofpurchase();" required>
+                                        <input type="hidden" class="form-control" id ="dop" name="dop" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -135,7 +136,7 @@
                     <!--Allocating license-->
                     <div id="allocateLicense" class="tab-pane fade">
                         <div class="container">
-                            <form role="form" class="form-horizontal" action="../../../server/softlicense/softallocation.php" method="post" ng-controller="allocController">
+                            <form role="form" class="form-horizontal" action="../server/softlicense/softallocation.php" method="post" ng-controller="allocController">
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" >Select a software:</label>
                                     <div class="col-lg-8 col-md-8">
@@ -184,13 +185,15 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" >Date of allocation:</label>
                                     <div class="col-lg-8 col-md-8">
-                                        <input type="date" class="form-control" name="dalloc" required>
+                                        <input type="text" class="form-control" id="dalloc1"   value="" placeholder="YYYY-MM-DD" onchange="dateofalloc();"  required>
+                                        <input type="hidden" class="form-control" id ="dalloc" name="dalloc" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" >License expires on:</label>
                                     <div class="col-lg-8 col-md-8">
-                                        <input type="date" class="form-control" name="lexpiry" required>
+                                        <input type="text" class="form-control" id="lexpiry1"  value="" placeholder="YYYY-MM-DD" onchange="licenseexpr();" required>
+                                        <input type="hidden" class="form-control" name="lexpiry" required>
                                     </div>
                                 </div>
                                 <div class="form-group">

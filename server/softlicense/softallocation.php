@@ -87,7 +87,7 @@ if ($stmt2->execute()) {
     $mail->Host = 'linix.ikp.physik.tu-darmstadt.de';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'tramdas@ikp.tu-darmstadt.de';                 // SMTP username
-    $mail->Password = 'FACu0jWukG';                           // SMTP password
+    $mail->Password = 'tarun_1391';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
@@ -103,7 +103,9 @@ if ($stmt2->execute()) {
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Software registration at IKP';
-    $mail->msgHTML(file_get_contents('../../views/softlicense/html/confirmation.html'), dirname(__FILE__));
+    $mail->Body    = 'Hello,<br>
+                        This is to confirm that we have allocated a license for '. $sas.' on '.$dalloc.'.<br><br>Regards,<br>IKP';
+
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     if(!$mail->send()) {
