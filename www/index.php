@@ -17,14 +17,27 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
     }
     $uemail = $_POST['userEmail'];
     $passwd = $_POST['userPasswd'];
+    $admin_activity = "Login/logout";
+    $date = date_create();
+    $adminTimestamp = date("Y-m-d H:i:s");
     $uname = substr($uemail,0, strpos($uemail, '@'));
+    $adminComments = "The user ". $uname. " has logged in";
+
     $sql = "SELECT * FROM users where userEmail = '$uemail' and userPassword = '$passwd'";
+    $stmt2 = $conn->prepare("INSERT INTO logs (activity, username, comments, timestamp) VALUES (?, ?, ?, ?)");
+    $stmt2->bind_param("ssss",$admin_activity, $uname, $adminComments, $adminTimestamp);
+
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         // output data of each row
         // while($row = $result->fetch_assoc()) {
         //   echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
         $_SESSION['name']=$uname;
+        if($stmt2->execute()){
+
+        } else {
+            die('execute() failed: ' . htmlspecialchars($stmt2->error));
+        }
         //Storing the name of user in SESSION variable.
         header("location: home.php");
 
@@ -32,6 +45,7 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
         echo "<br><br><h4 class='errormsg'>Kindly check your credentials and try again!!!</h4>";
 
     }
+    $stmt2->close();
     $conn->close();
 }
 
