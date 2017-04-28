@@ -45,6 +45,7 @@ $name=$_SESSION['name'];
                         <li><a data-toggle="tab" href="#softLicensemgmt">Software License Mangement</a></li>
                         <li><a data-toggle="tab" href="#invMgmt">Inventory Management</a></li>
                         <li><a data-toggle="tab" href="#swtPatchMgmt">Switching & Patching</a></li>
+                        <li><a data-toggle="tab" href="#logMgmt">Logs</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="welcome tab-pane fade in active"><h3>Welcome to the IKP Management console!!!</h3></div>
@@ -104,6 +105,10 @@ $name=$_SESSION['name'];
                         </div>
                         <div id="swtPatchMgmt" class="tab-pane fade" ng-app="switchpatch">
                             <?php include '../views/switchpatch/html/index.html';?>
+                        </div>
+                        <!-- End of Switch patching management system -->
+                        <div id="logMgmt" class="tab-pane fade" ng-app="logging">
+                            <?php include '../views/logs/html/index.html';?>
                         </div>
                     </div>
                 </div>

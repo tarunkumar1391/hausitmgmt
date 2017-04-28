@@ -29,7 +29,7 @@ if(isset($_POST['userEmail']) && isset($_POST['userPasswd'])){
         header("location: home.php");
 
     } else {
-        echo "<h4>Kindly check your credentials and try again!!!</h4>";
+        echo "<br><br><h4 class='errormsg'>Kindly check your credentials and try again!!!</h4>";
 
     }
     $conn->close();

@@ -1,0 +1,38 @@
+<div class="col-md-2 col-lg-2 navbg">
+    <ul class="nav nav-pills nav-stacked sidenavpad">
+        <li><a data-toggle="tab" href="#logs">Logs</a></li>
+    </ul>
+</div>
+<div class="col-md-10 col-lg-10">
+    <div class="tab-content contentpad">
+        <div id="logs" class="tab-pane ">
+            <form role="form" class="form-horizontal"  method="post">
+                <div class="form-group ">
+                    <input type="text" class="form-control"  type="text"  placeholder="Search... " ng-model="userSearch">
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-hover" ng-controller = "logsController" >
+                    <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Activity</th>
+                        <th>User</th>
+                        <th>Comments</th>
+                        <th>Timestamp</th>
+                    </tr>
+                    </thead>
+                    <tbody >
+                    <tr ng-repeat="entry in entries | filter: userSearch">
+                        <td>{{entry.Sno}}</td>
+                        <td>{{entry.Activity}}</td>
+                        <td>{{entry.User}}</td>
+                        <td>{{entry.Comments}}</td>
+                        <td>{{entry.Timestamp}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

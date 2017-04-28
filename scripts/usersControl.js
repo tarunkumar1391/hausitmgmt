@@ -13,7 +13,7 @@ usersManage.controller('usersController',function ($scope,$http,$uibModal, $log)
         $scope.open = function(size){
 
             $scope.items = this.entry;
-            console.log($scope.items);
+
 
 
             var modalInstance = $uibModal.open({
