@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 if ($stmt->execute()) {
     echo "Entry no. $sno has been update successfully!! ".'\n' ;
-    echo '<a href="../../www/home.php">click here to return!!</a>';
+    echo '<a href="../../home.php">click here to return!!</a>';
     if($stmt2->execute()){
 
     } else {

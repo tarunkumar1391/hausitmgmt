@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 if ($stmt->execute()) {
     echo "Your registration has completed successfully!! ".'\n' ;
-    echo '<a href="../../www/home.php">click here to return!!</a>';
+    echo '<a href="../../home.php">click here to return!!</a>';
 
 
 

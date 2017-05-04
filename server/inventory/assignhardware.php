@@ -59,7 +59,7 @@ if ($stmt2->execute()) {
 
     if($stmt->execute()){
         echo "A new entry has been created successfully and the license database has been updated accordingly!! ".'\n' ;
-        echo '<a href="../../www/index.php">click here to return!!</a>';
+        echo '<a href="../../index.php">click here to return!!</a>';
 //    header("Location: ../www/index.html");
     }else {
         die('execute() failed: ' . htmlspecialchars($stmt->error));

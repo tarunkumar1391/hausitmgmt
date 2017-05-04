@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+?>
+<?php
+if(!isset($_SESSION['name']))
+{
+    header("location: index.php");
+}
+$adminName=$_SESSION['name'];
+
+?>
+<?php
 /**
  * Created by PhpStorm.
  * User: tkumar
@@ -7,9 +19,9 @@
 
  **/
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ikp";
+$username = "uhausitmgnt";
+$password = "AhTahsh8rig0ooP2";
+$dbname = "dbhausitmgnt";
 //define variables
 $sno2 = $finNok = $origNok = $sas = $nokl = $softreq = $requester_email = $mac_device = $requester_roomNo = $requester_groupName = $dalloc = $lexpiry = $comm = "";
 // Create connection
@@ -26,6 +38,9 @@ $stmt->bind_param("sissssssss", $sas, $nokl, $softreq, $requester_email, $mac_de
 
 $stmt2 = $conn->prepare("UPDATE software SET Nok=? WHERE Sno=?");
 $stmt2->bind_param("ii", $finNok,$sno2);
+
+$stmt3 = $conn->prepare("INSERT INTO logs (activity, username, comments, timestamp) VALUES (?, ?, ?, ?)");
+$stmt3->bind_param("ssss",$admin_activity, $adminName, $adminComments, $adminTimestamp);
 
 function input($data) {
 $data = trim($data);
@@ -48,6 +63,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $dalloc = isset($_POST['dalloc']) ? input($_POST['dalloc']) : "0";
     $lexpiry = isset($_POST['lexpiry']) ? input($_POST['lexpiry']) : "0";
     $comm = isset($_POST['comm']) ? input($_POST['comm']) : "0";
+    $admin_activity = "Software License Allocation";
+    $adminComments = "A new Software/License has been allotted to ".$softreq;
+    $date = date_create();
+    $adminTimestamp = date("Y-m-d H:i:s");
 
     if($nokl <= $origNok && $nokl > 0){
         $finNok = $origNok - $nokl;
@@ -64,9 +83,13 @@ if ($stmt2->execute()) {
 //    echo "Software db has been updated" ;
     if($stmt->execute()){
         echo "A new entry has been created successfully and the license database has been updated accordingly!! ".'\n' ;
-        echo '<a href="../../www/index.php">click here to return!!</a>';
+        echo '<a href="../../home.php">click here to return!!</a>';
 //    header("Location: ../www/index.html");
+        if($stmt3->execute()){
 
+        } else {
+            die('execute() failed: ' . htmlspecialchars($stmt2->error));
+        }
     }else {
         die('execute() failed: ' . htmlspecialchars($stmt->error));
     }
@@ -118,7 +141,7 @@ if ($stmt2->execute()) {
 die('execute() failed: ' . htmlspecialchars($stmt->error));
 }
 
-
+$stmt3->close();
 $stmt2->close();
 
 //if( true === $stmt){

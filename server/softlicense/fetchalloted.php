@@ -8,7 +8,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-$conn = new mysqli("localhost", "root", "", "ikp");
+$conn = new mysqli("localhost", "uhausitmgnt", "AhTahsh8rig0ooP2", "dbhausitmgnt");
 
 $result = $conn->query("SELECT * FROM allocatedsoftware");
 

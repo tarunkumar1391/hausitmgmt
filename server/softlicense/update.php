@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+?>
+<?php
+if(!isset($_SESSION['name']))
+{
+    header("location: index.php");
+}
+$adminName=$_SESSION['name'];
+
+?>
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,7 +27,9 @@ if ($conn->connect_error) {
 
 // prepare and bind
 $stmt = $conn->prepare("UPDATE publications SET lname=?, fname=?,  betreuer=?, enddate=?, typofwork=?, foerderung=?, tp=?, title=? WHERE sno=?");
+$stmt2 = $conn->prepare("INSERT INTO logs (activity, username, comments, timestamp) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssssssssi", $lname, $fname, $betreuer, $enddate, $typofwork, $foerderung, $tp, $title,$sno);
+$stmt2->bind_param("ssss",$admin_activity, $adminName, $adminComments, $adminTimestamp);
 
 function input($data) {
     $data = trim($data);
@@ -43,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 if ($stmt->execute()) {
     echo "The entry". $sno ." has been updated successfully!! ".'\n' ;
-    echo '<a href="../../www/index.php">click here to return!!</a>';
+    echo '<a href="../../index.php">click here to return!!</a>';
 //    header("Location: ../www/index.html");
 
 } else {

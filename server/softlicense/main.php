@@ -1,8 +1,21 @@
 <?php
+session_start();
+
+?>
+<?php
+if(!isset($_SESSION['name']))
+{
+    header("location: index.php");
+}
+$adminName=$_SESSION['name'];
+
+?>
+
+<?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ikp";
+$username = "uhausitmgnt";
+$password = "AhTahsh8rig0ooP2";
+$dbname = "dbhausitmgnt";
 //define variables
 $Sname = $Dop = $Tol = $Price = $Vname = $Nok = $Order = $kostenstelle = $Description = "";
 // Create connection
@@ -15,7 +28,9 @@ if ($conn->connect_error) {
 
 // prepare and bind
 $stmt = $conn->prepare("INSERT INTO software (Sname, Dop, Tol, Price, Vname, Nok, Ordernum, kostenstelle, Description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt2 = $conn->prepare("INSERT INTO logs (activity, username, comments, timestamp) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("sssisisss", $Sname, $Dop, $Tol, $Price, $Vname, $Nok, $Order,$kostenstelle, $Description);
+$stmt2->bind_param("ssss",$admin_activity, $adminName, $adminComments, $adminTimestamp);
 
 function input($data) {
     $data = trim($data);
@@ -35,7 +50,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $Order = isset($_POST['ordernum']) ? input($_POST['ordernum']) : "0";
     $kostenstelle = isset($_POST['kostenstelle']) ? input($_POST['kostenstelle']) : "0";
     $Description = isset($_POST['desc']) ? input($_POST['desc']) : "0";
-
+    $admin_activity = "Software Registration";
+    $adminComments = "A new software has been Purchased/Registered";
+    $date = date_create();
+    $adminTimestamp = date("Y-m-d H:i:s");
 
 
 }
@@ -43,9 +61,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 if ($stmt->execute()) {
    echo "A new entry has been created successfully!! ".'\n' ;
-    echo '<a href="../../www/index.php">click here to return!!</a>';
+    echo '<a href="../../home.php">click here to return!!</a>';
 //    header("Location: ../www/index.html");
-    
+    if($stmt2->execute()){
+
+    } else {
+        die('execute() failed: ' . htmlspecialchars($stmt2->error));
+    }
 } else {
     die('execute() failed: ' . htmlspecialchars($stmt->error));
 }
@@ -57,7 +79,7 @@ if ($stmt->execute()) {
 
 //printf ("New records created successfully", $stmt->error);
 
-
+$stmt2->close();
 $stmt->close();
 $conn->close();
 ?>
